@@ -1,3 +1,7 @@
+/**
+ * Enter a positive number it will calculate is it even or odd.
+ */
+
 const userInput = window.prompt("Please enter a number");
 const userInt = Number(userInput);
 
