@@ -1,24 +1,24 @@
-const creative_it_institute = {
-  institute_name: "Creative IT Institute",
+const creativeItInstitute = {
+  instituteName: "Creative IT Institute",
   location: ["mirpur", "dhanmondi", "uttara", "chittagong"],
-  faculties: ["shohan", "shamim", "raziur", "al_amin", "taufik"],
-  head_of_department: "Shohan Hossain Ean",
-  batch_active: true,
+  faculties: ["shohan", "shamim", "raziur", "alAmin", "taufik"],
+  headOfDepartment: "Shohan Hossain Ean",
+  batchActive: true,
   batch: {
-    batch_name: "mern_2403",
-    total_students: 23,
-    mentor_name: "Taufik islam",
-    skills_learned: [
+    batchName: "mern_2403",
+    totalStudents: 23,
+    mentorName: "Taufik Islam",
+    skillsLearned: [
       "HTML",
       "CSS",
       "Bootstrap",
       "Git",
-      "Github",
+      "GitHub",
       "Figma",
       "VS Code",
-      "Javascript",
+      "JavaScript",
     ],
-    students_list: [
+    studentsList: [
       "Hridoy",
       "Librance",
       "Niam",
@@ -29,7 +29,6 @@ const creative_it_institute = {
       "Shakib",
       "Ismail",
       "Zarin",
-      "Hridoy",
       "Gahangir",
       "Aylin",
       "Anushka",
@@ -37,13 +36,14 @@ const creative_it_institute = {
       "Rayian",
     ],
   },
-  greeting_students: function () {
-    console.log(`Hello everyone. welcome to ${this.institute_name}.`);
+  greetingStudents: function () {
+    console.log(`Hello everyone. Welcome to ${this.instituteName}.`);
   },
 };
 
-creative_it_institute.greeting_students();
+// Method call and log statements
+creativeItInstitute.greetingStudents();
 console.log(
-  `Web and Software Head of the Department is Mr ${creative_it_institute.head_of_department} sir.`
+  `Web and Software Head of the Department is Mr ${creativeItInstitute.headOfDepartment} sir.`
 );
-console.log(`Our batch number is ${creative_it_institute.batch.batch_name}.`);
+console.log(`Our batch number is ${creativeItInstitute.batch.batchName}.`);
