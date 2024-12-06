@@ -1,9 +1,9 @@
-// 1
+// Problem 1
 // Remove Duplicates
 // Write a function that takes an array and returns a new array with all duplicates removed.
 // Example:
-removeDuplicates([1, 2, 3, 1, 4, 2]);
 // Output: [1, 2, 3, 4]
+removeDuplicates([1, 2, 3, 1, 4, 2]);
 
 /**
  * Removes duplicates value in an array
@@ -14,15 +14,15 @@ function removeDuplicates(arr) {
   const filteredArray = arr.filter(
     (item, index) => arr.indexOf(item) === index
   );
-  console.log(filteredArray);
+  console.log("removeDuplicates: ", filteredArray);
 }
 
-// 2
+// Problem 2
 // Reverse an Array
 // Create a function that reverses the elements of an array without using the reverse() method.
 // Example:
-reverseArray([1, 2, 3]);
 // Output: [3, 2, 1]
+reverseArray([1, 2, 3]);
 
 /**
  * Reverse an array
@@ -30,15 +30,15 @@ reverseArray([1, 2, 3]);
  */
 function reverseArray(arr) {
   const reversedArray = arr.slice().reverse();
-  console.log(reversedArray);
+  console.log("reverseArray: ", reversedArray);
 }
 
-// 3
+// Problem 3
 // Find the Index
 // Write a function that returns the index of a specific value in an array using findIndex(). If not found, return -1.
 // Example:
-findIndex([10, 20, 30], 20);
 // Output: 1
+findIndex([10, 20, 30], 20);
 
 /**
  * Find the index of a given array.
@@ -50,7 +50,7 @@ function findIndex(arr, value) {
   console.log("findIndex: ", index);
 }
 
-// 4
+// Problem 4
 // Sum of Elements
 // Write a function that calculates the sum of all elements in an array using reduce().
 // Example:
@@ -67,7 +67,7 @@ function sumArray(arr) {
   console.log("sumArray: ", sum);
 }
 
-// 5
+// Problem 5
 // Flatten a Nested Array
 // Write a function that flattens a nested array into a single array.
 // Example:
@@ -94,15 +94,15 @@ filterEvens([1, 2, 3, 4, 5]); // Output: [2, 4]
 
 function filterEvens(arr) {
   const evenArray = arr.filter((item) => item % 2 === 0);
-  console.log(evenArray);
+  console.log("filterEvens: ", evenArray);
 }
 
 // Problem 7
 // Sort Alphabetically
 // Write a function to sort an array of strings alphabetically using sort().
 // Example:
-sortStrings(["banana", "apple", "cherry"]);
 // Output: ["apple", "banana", "cherry"]
+sortStrings(["banana", "apple", "cherry"]);
 
 /**
  * Sort Alphabetically
@@ -125,14 +125,14 @@ findDuplicates([1, 2, 2, 3, 4, 4]); // Output: [2, 4]
  */
 function findDuplicates(arr) {
   const duplicates = arr.filter((item, index) => arr.indexOf(item) !== index);
-  console.log("Duplicates: ", duplicates);
+  console.log("findDuplicates: ", duplicates);
 }
 
 // Problem 9 - Group by Property
 // Write a function that groups an array of objects by a specified property.
 // Example:
-groupBy([{ age: 20 }, { age: 25 }, { age: 20 }], "age");
 // Output: { 20: [{age: 20}, {age: 20}], 25: [{age: 25}] }
+groupBy([{ age: 20 }, { age: 25 }, { age: 20 }], "age");
 
 /**
  * Groups an array of objects by a specified property
@@ -151,14 +151,15 @@ function groupBy(arr, property) {
     return acc;
   }, {});
 
-  console.log(result);
+  console.log("groupBy: ", result);
 }
 
+// Problem 10
 // Partition an Array
 // Write a function that splits an array into two subarrays: one with elements that satisfy a condition, and another with elements that don’t.
 // Example:
-partitionArray([1, 2, 3, 4], (x) => x % 2 === 0);
 // Output: [[2, 4], [1, 3]]
+partitionArray([1, 2, 3, 4], (x) => x % 2 === 0);
 
 /**
  * Partition an array.
@@ -190,14 +191,15 @@ function partitionArray(arr, condition) {
     [[], []]
   );
 
-  console.log(result);
+  console.log("partitionArray: ", result);
 }
 
+// Problem 11
 // Count Occurrences
 // Write a function that counts the occurrences of each element in an array.
 // Example:
-countOccurrences([1, 2, 2, 3, 1]);
 // Output: { 1: 2, 2: 2, 3: 1 }
+countOccurrences([1, 2, 2, 3, 1]);
 
 /**
  * Count Occurrence
@@ -220,14 +222,15 @@ function countOccurrences(arr) {
     return prev;
   }, {});
 
-  console.log(result);
+  console.log("countOccurrences: ", result);
 }
 
+// Problem 12
 // Custom Map Implementation
 // Create a function that replicates the behavior of map() using a for loop.
 // Example:
-customMap([1, 2, 3], (x) => x * 2);
 // Output: [2, 4, 6]
+customMap([1, 2, 3], (x) => x * 2);
 
 /**
  * Custom Map function
@@ -247,14 +250,15 @@ function customMap(arr, callBack) {
   for (let i = 0; i < arr.length; i++) {
     result.push(callBack(arr[i]));
   }
-  console.log("Custom Map", result);
+  console.log("customMap: ", result);
 }
 
+// Problem 13
 // Chunk an Array
 // Write a function that splits an array into chunks of a specified size.
 // Example:
-chunkArray([1, 2, 3, 4, 5], 2);
 // Output: [[1, 2], [3, 4], [5]]
+chunkArray([1, 2, 3, 4, 5], 2);
 
 /**
  * Chunk an Array.
@@ -268,14 +272,15 @@ function chunkArray(arr, size) {
     result.push(arr.slice(i, i + size));
   }
 
-  console.log("Chunk Array: ", result);
+  console.log("chunkArray: ", result);
 }
 
+// Problem 14
 // Find Max and Min
 // Write a function that returns the maximum and minimum values in an array.
 // Example:
-findMinMax([1, 2, 3, 4, 5]);
 // Output: { max: 5, min: 1 }
+findMinMax([1, 2, 3, 4, 5]);
 
 /**
  * Find Max and Min
@@ -294,14 +299,15 @@ function findMinMax(arr) {
       maxValue = arr[i];
     }
   }
-  console.log("Min Max: ", { min: minValue, max: maxValue });
+  console.log("findMinMax: ", { min: minValue, max: maxValue });
 }
 
+// Problem 15
 // Intersection of Two Arrays
 // Write a function that returns the common elements between two arrays.
 // Example:
-intersect([1, 2, 3], [2, 3, 4]);
 // Output: [2, 3]
+intersect([1, 2, 3], [2, 3, 4]);
 
 /**
  * Intersection of two arrays
@@ -318,5 +324,5 @@ function intersect(arr1, arr2) {
     }
   }
 
-  console.log("Intersection: ", result);
+  console.log("intersect: ", result);
 }
